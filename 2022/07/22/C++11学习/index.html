@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="light">
+  <meta name="description" content="个人blog">
+  
+  <title>Light</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>WangGuangmin</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2022/07/">July 2022<span class="archive-count">5</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-10.png)" >
+  <h2></h2>
+    
+  <p>作者:WangGuangmin &nbsp&nbsp 发布于:<time datetime="2022-07-22T00:42:07.282Z">
+          2022-07-22
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <hr>
+<h2 id="title-C-11学习笔记"><a href="#title-C-11学习笔记" class="headerlink" title="title:C++11学习笔记"></a>title:C++11学习笔记</h2><h2 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h2><p>C++11 引入了 auto 和 decltype 这两个关键字实现了类型推导，让编译器来操心变量的类型。</p>
+<h3 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h3><p>让编译器在编译的时候就推导出变量的类型，可以通过&#x3D;右边的类型推导出变量的类型。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(vector::const_iterator itr = vec.<span class="built_in">cbegin</span>(); itr != vec.<span class="built_in">cend</span>(); ++itr)</span><br></pre></td></tr></table></figure>
+<p>而有了 auto 之后可以：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 由于 cbegin() 将返回 vector::const_iterator</span></span><br><span class="line"><span class="comment">// 所以 itr 也应该是 vector::const_iterator 类型</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> itr = vec.<span class="built_in">cbegin</span>(); itr != vec.<span class="built_in">cend</span>(); ++itr);</span><br></pre></td></tr></table></figure>
+<p>其他常见用法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> i = <span class="number">5</span>; <span class="comment">// i 被推导为 int</span></span><br><span class="line"><span class="keyword">auto</span> arr = <span class="keyword">new</span> <span class="built_in">auto</span>(<span class="number">10</span>) <span class="comment">// arr 被推导为 int *</span></span><br></pre></td></tr></table></figure>
+<h3 id="decltype"><a href="#decltype" class="headerlink" title="decltype"></a>decltype</h3><p>相对于auto用于推导变量类型，而decltype则用于推导表达式类型，这里只用于编译器分析表达式的类型，表达式实际不会进行运算。</p>
+<h2 id="左值右值"><a href="#左值右值" class="headerlink" title="左值右值"></a>左值右值</h2><p>概念一：</p>
+<p>左值：可以取地址并且有名字的东西就是左值</p>
+<p>右值：不能取地址的没有名字的东西就是右值</p>
+<p>概念二：</p>
+<p>左值：可以放到等号左边的东西叫左值。</p>
+<p>右值：不可以放到等号左边的东西就叫右值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = b +c;</span><br></pre></td></tr></table></figure>
+<p>a是左值，a有变量名，也可以取地址，可以放到等号左边, 表达式b+c的返回值是右值，没有名字且不能取地址，&amp;(b+c)不能通过编译，而且也不能放到等号左边。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">4</span>; <span class="comment">// a是左值，4作为普通字面量是右值</span></span><br></pre></td></tr></table></figure>
+<p>左值一般有：</p>
+<ul>
+<li>函数名和变量名</li>
+<li>返回左值引用的函数调用</li>
+<li>前置自增自减表达式++i、–i</li>
+<li>由赋值表达式或赋值运算符连接的表达式(a&#x3D;b, a +&#x3D; b等)</li>
+<li>解引用表达式*p</li>
+<li>字符串字面值”abcd”</li>
+</ul>
+<h2 id="左值引用右值引用"><a href="#左值引用右值引用" class="headerlink" title="左值引用右值引用"></a>左值引用右值引用</h2><p>根据名字大概就可以猜到意思，左值引用就是对左值进行引用的类型，右值引用就是对右值进行引用的类型，他们都是引用，都是对象的一个别名，并不拥有所绑定对象的堆存，所以都必须立即初始化。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type &amp;name = exp; <span class="comment">// 左值引用</span></span><br><span class="line">type &amp;&amp;name = exp; <span class="comment">// 右值引用</span></span><br></pre></td></tr></table></figure>
+<h3 id="左值引用"><a href="#左值引用" class="headerlink" title="左值引用"></a>左值引用</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a; <span class="comment">// b是左值引用</span></span><br><span class="line">b = <span class="number">4</span>;</span><br><span class="line"><span class="type">int</span> &amp;c = <span class="number">10</span>; <span class="comment">// error，10无法取地址，无法进行引用</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> &amp;d = <span class="number">10</span>; <span class="comment">// ok，因为是常引用，引用常量数字，这个常量数字会存储在内存中，可以取地址</span></span><br></pre></td></tr></table></figure>
+<p>可以得出结论：对于左值引用，等号右边的值必须可以取地址，如果不能取地址，则会编译失败，或者可以使用const引用形式，但这样就只能通过引用来读取输出，不能修改数组，因为是常量引用。</p>
+<h3 id="右值引用"><a href="#右值引用" class="headerlink" title="右值引用"></a>右值引用</h3><p>如果使用右值引用，那表达式等号右边的值需要时右值，可以使用std::move函数强制把左值转换为右值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">4</span>;</span><br><span class="line"><span class="type">int</span> &amp;&amp;b = a; <span class="comment">// error, a是左值</span></span><br><span class="line"><span class="type">int</span> &amp;&amp;c = std::<span class="built_in">move</span>(a); <span class="comment">// ok</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="移动语义"><a href="#移动语义" class="headerlink" title="移动语义"></a>移动语义</h2>
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2022/07/24/C++入门基础知识/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2022/07/19/test-page/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#title-C-11%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">title:C++11学习笔记</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC"><span class="post-toc-number">2.</span> <span class="post-toc-text">类型推导</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#auto"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">auto</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#decltype"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">decltype</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B7%A6%E5%80%BC%E5%8F%B3%E5%80%BC"><span class="post-toc-number">3.</span> <span class="post-toc-text">左值右值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B7%A6%E5%80%BC%E5%BC%95%E7%94%A8%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="post-toc-number">4.</span> <span class="post-toc-text">左值引用右值引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B7%A6%E5%80%BC%E5%BC%95%E7%94%A8"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">左值引用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">右值引用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89"><span class="post-toc-number">5.</span> <span class="post-toc-text">移动语义</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Light</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>

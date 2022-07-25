@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="light">
+  <meta name="description" content="个人blog">
+  
+  <title>Light</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>WangGuangmin</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2022/07/">July 2022<span class="archive-count">5</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-15.png)" >
+  <h2>C++入门基础知识</h2>
+    
+  <p>作者:WangGuangmin &nbsp&nbsp 发布于:<time datetime="2022-07-24T02:39:02.226Z">
+          2022-07-24
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h2 id="缺省参数"><a href="#缺省参数" class="headerlink" title="缺省参数"></a>缺省参数</h2><p>缺省参数是声明或定义函数时为函数的参数指定一个默认值。在调用该函数时，如果没有指定实参则采用该<br>默认值，否则使用指定的实参。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> a = <span class="number">0</span>)</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="全缺省"><a href="#全缺省" class="headerlink" title="全缺省"></a>全缺省</h3><p>全部参数都设置为缺省。</p>
+<h3 id="半缺省"><a href="#半缺省" class="headerlink" title="半缺省"></a>半缺省</h3><p>部分缺省，半缺省参数必须从右往左依次给出，不能间隔着给。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">int</span> b, <span class="type">int</span> c, <span class="type">int</span> a = <span class="number">0</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>缺省参数不能在函数声明和定义中同时出现</p>
+<p>因为：如果声明与定义位置同时出现，恰巧两个位置提供的值不同，那编译器就无法确定到底该用那个缺省值。</p>
+<p>缺省值必须是常量或者全局变量</p>
+<h3 id="extern-“C”"><a href="#extern-“C”" class="headerlink" title="extern “C”"></a>extern “C”</h3><p>有时候在C++工程中可能需要将某些函数按照C的风格来编译，在函数前加extern “C”，意思是告诉编译器，</p>
+<p>将该函数按照C语言规则来编译。比如：tcmalloc是google用C++实现的一个项目，他提供tcmallc()和tcfree</p>
+<p>两个接口来使用，但如果是C项目就没办法使用，那么他就使用extern “C”来解决。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>引用不是新定义一个变量，而是给已存在变量取了一个别名，编译器不会为引用变量开辟内存空间，它和它<br>引用的变量共用同一块内存空间。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> &amp;b = a;<span class="comment">//给a起了一个别名b, int 是b的类型</span></span><br><span class="line">    b = <span class="number">3</span>; <span class="comment">//改变b也就相当于改变了a</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：引用类型必须和引用实体是相同类型的</p>
+<h3 id="引用的特征"><a href="#引用的特征" class="headerlink" title="引用的特征"></a>引用的特征</h3><p>引用在定义时必须初始化。</p>
+<p>一个变量可以有多个引用。</p>
+<p>引用一旦引用了一个实体，就不能再引用其他实体。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> &amp;b = a;</span><br><span class="line"><span class="type">int</span> c = <span class="number">20</span>;</span><br><span class="line">b = c;<span class="comment">//效果是把a的值变成了c,即20，这不表示b转而引用c</span></span><br></pre></td></tr></table></figure>
+<h3 id="常引用"><a href="#常引用" class="headerlink" title="常引用"></a>常引用</h3><p>上面提到，引用类型必须和引用实体是同种类型的。但是仅仅是同种类型，还不能保证能够引用成功，这儿我们还要注意可否可以修改的问题。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="comment">//int&amp; ra = a;//该句编译会出错，a为常量</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span>&amp; ra = a;</span><br><span class="line"><span class="comment">//int &amp;b = 10;//编译会出错，10是常量</span></span><br></pre></td></tr></table></figure>
+<p>引用中的隐式类型提升：</p>
+<figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> &amp;ra = a;</span><br></pre></td></tr></table></figure>
+<p>这里不加const会有问题，首先要明白隐士类型提升的问题，在这里int到double存在隐士类型的提升，而在提升的过程中系统会创建一个常量区来存放a类型提升后的结果。</p>
+<h3 id="引用做返回值"><a href="#引用做返回值" class="headerlink" title="引用做返回值"></a>引用做返回值</h3><p>当然引用也能做返回值，但是要特别注意，我们返回的数据不能是函数内部创建的普通局部变量，因为在函数内部定义的普通的局部变量会随着函数调用的结束而被销毁。我们返回的数据必须是被static修饰或者是动态开辟的或者是全局变量等不会随着函数调用的结束而被销毁的数据。</p>
+<h3 id="引用和指针的区别"><a href="#引用和指针的区别" class="headerlink" title="引用和指针的区别"></a>引用和指针的区别</h3><p>在语法概念上引用就是一个别名，没有独立空间，和其引用实体共用同一块空间。</p>
+<p>在底层实现上实际是有空间的，因为引用是按照指针方式来实现的。</p>
+<ol>
+<li><p>引用在定义时必须初始化，指针没有要求。</p>
+</li>
+<li><p>引用在初始化时引用一个实体后，就不能再引用其他实体，而指针可以在任何时候指向任何一个同类型实体。</p>
+</li>
+<li><p>没有NULL引用，但有NULL指针。</p>
+</li>
+<li><p>在sizeof中的含义不同：引用的结果为引用类型的大小，但指针始终是地址空间所占字节个数（32位平台下占4个字节）。</p>
+</li>
+<li><p>引用进行自增操作就相当于实体增加1，而指针进行自增操作是指针向后偏移一个类型的大小。</p>
+</li>
+<li><p>有多级指针，但是没有多级引用。</p>
+</li>
+<li><p>访问实体的方式不同，指针需要显示解引用，而引用是编译器自己处理。</p>
+</li>
+<li><p>引用比指针使用起来相对更安全。</p>
+</li>
+</ol>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2022/07/22/C++11学习/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">缺省参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%A8%E7%BC%BA%E7%9C%81"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">全缺省</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8D%8A%E7%BC%BA%E7%9C%81"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">半缺省</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#extern-%E2%80%9CC%E2%80%9D"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">extern “C”</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8"><span class="post-toc-number">2.</span> <span class="post-toc-text">引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E7%89%B9%E5%BE%81"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">引用的特征</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%B8%E5%BC%95%E7%94%A8"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">常引用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8%E5%81%9A%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">引用做返回值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8%E5%92%8C%E6%8C%87%E9%92%88%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">引用和指针的区别</span></a></li></ol></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Light</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
